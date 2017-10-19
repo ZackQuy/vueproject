@@ -163,8 +163,8 @@
 
 #### 2.3 接口文档
 
-* [接口文档](http://192.168.138.183:8011/swagger-ui.html#/) 是由后端基于`swagger`提供的
-* [接口模拟](http://172.16.31.83:8080/workspace/myWorkspace.do?projectId=15#-5) 基于 `rap`前端自己mock
+* [接口文档] 是由后端基于`swagger`提供的
+* [接口模拟] 基于 `rap`前端自己mock
 
 ### 3  开发规范
 
@@ -177,7 +177,7 @@
 
 #### 3.2  git规范
 
-[项目git仓库](http://172.16.31.83/UEC/everisk)
+[项目git仓库]
 常见命令:
 ```
 git add
