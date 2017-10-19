@@ -2,11 +2,11 @@
   <div class="page_inner page_strate_rule">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path:'/config/stratery'}">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_new'}">新建策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strate_new'}">新建策略</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strate_rule'}">新建策略更新规则</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/stratery'}">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_new'}">新建玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strate_new'}">新建玩偶</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strate_rule'}">新建玩偶更新规则</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="page_body">
@@ -18,7 +18,7 @@
         >
           <el-col :span="8">
             <div class="col_1">
-              <el-input v-model="update_info.name" placeholder="请输入策略更新规则名称"></el-input>
+              <el-input v-model="update_info.name" placeholder="请输入玩偶更新规则名称"></el-input>
 
             </div>
           </el-col>
@@ -197,9 +197,9 @@ export default {
       }
 
       let valid_data = [
-        {valid: this.update_info.name.length > 3, msg: '请确认策略更新规则名称长度不少于4位'},
-        {valid: this.update_info.name.length < 17, msg: '请确认策略更新规则名称长度不超过16位'},
-        {valid: this.$rules.name_rule(this.update_info.name), msg: '请确认策略更新规则名称不包含特殊字符'},
+        {valid: this.update_info.name.length > 3, msg: '请确认玩偶更新规则名称长度不少于4位'},
+        {valid: this.update_info.name.length < 17, msg: '请确认玩偶更新规则名称长度不超过16位'},
+        {valid: this.$rules.name_rule(this.update_info.name), msg: '请确认玩偶更新规则名称不包含特殊字符'},
         {valid: this.$rules.num_rule(update_info_submit.r_hours), msg: '请确认更新频率自定义为正整数'}
       ]
       if (update_info_submit.is_try) {

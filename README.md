@@ -1,4 +1,4 @@
-# 移动威胁感知建设银行定制项目
+# 一个个人vue项目[独自架构]
 
 > 冯博
 
@@ -69,9 +69,9 @@
 	│   │   ├── navbar_login.vue	头部BANNER——LOGIN专用
 	│   │   └── navlink.vue			头部导航
 	│   └── SideBar
-	│       ├── analyrisk.vue		威胁分析侧导航
+	│       ├── analyrisk.vue		仿真市场侧导航
 	│       ├── config.vue			配置管理侧导航
-	│       └── everisk.vue			风险感知侧导航[一期不实现]
+	│       └── everisk.vue			卡通感知侧导航[一期不实现]
 	├── main.js
 	├── router
 	│   └── router.js		router暂不进行拆分，一个文件进行集中管理router

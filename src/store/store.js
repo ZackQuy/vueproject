@@ -4,19 +4,19 @@ import Vuex from 'vuex'
 // 配置
 import userconfig from './modules/common/userconfig'
 
-// 威胁分析 攻击统计
+// 仿真市场 攻击统计
 import calculate from './modules/analyrisk/calculate'
 
-// 威胁分析 实时监测
+// 仿真市场 实时监测
 import realtime from './modules/analyrisk/realtime'
 
-// 威胁感知 TODO 这个模块得拆
+// 仿真感知 TODO 这个模块得拆
 import everisk from './modules/everisk/everisk'
 
 // 首页
 import home from './modules/home/home'
 
-// 配置 策略
+// 配置 玩偶
 import events from './modules/config/events'
 
 // 配置 自定义事件

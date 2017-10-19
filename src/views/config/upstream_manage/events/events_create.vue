@@ -65,7 +65,7 @@
         <div class="legend_body">
           <el-row  class="l_h_30">
             <el-col :span="1">
-              <span class="font_small_title">威胁</span>
+              <span class="font_small_title">仿真</span>
             </el-col>
             <template v-for="ri in risk_1">
               <!-- <el-col :span="3"> -->
@@ -79,7 +79,7 @@
           <el-row  class="l_h_30">
 
             <el-col :span="1">
-              <span class="font_small_title">风险</span>
+              <span class="font_small_title">卡通</span>
             </el-col>
 
             <template v-for="ri in risk_2">
@@ -217,7 +217,7 @@ export default {
         {valid: this.eventinfo.name.length > 3, msg: '请确认自定义事件名称长度不少于4位'},
         {valid: this.eventinfo.name.length < 17, msg: '请确认自定义事件名称长度不超过16位'},
         {valid: this.$rules.name_rule(this.eventinfo.name), msg: '请确认自定义事件名称不包含特殊字符'},
-        {valid: eventClass.length, msg: '当前自定义事件未包含任何威胁或风险'}
+        {valid: eventClass.length, msg: '当前自定义事件未包含任何仿真或卡通'}
       ]
       // 验证空名称
       // let illness_item = this.renderData.find(e => {

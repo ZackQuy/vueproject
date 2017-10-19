@@ -5,19 +5,19 @@ export const USER_FILTER_SHOW = 'USER_FILTER_SHOW'
 export const USER_FILTER_HIDE = 'USER_FILTER_HIDE'
 export const USER_FILTER_OPT = 'USER_FILTER_OPT'
 export const USER_FILTER_DATA = 'USER_FILTER_DATA'
-// 系统配置－策略组
+// 系统配置－玩偶组
 
-// 当前运行策略组
+// 当前运行玩偶组
 export const STRATES_CUR_DATA = 'STRATES_CUR_DATA'
 
-// 修改当前策略组
+// 修改当前玩偶组
 export const STRATES_LIST_DATA = 'STRATES_LIST_DATA'
 export const STRATES_ACTIVE_ID = 'STRATES_ACTIVE_ID'
 export const STRARES_POOL_LIST = 'STRARES_POOL_LIST'
 
 export const STRATES_DETAILS = 'STRATES_DETAILS'
 export const STRATES_EDIT = 'STRATES_EDIT'
-// 新建策略
+// 新建玩偶
 export const STRATES_DEVICE_LIST = 'STRATES_DEVICE_LIST'
 export const STRATE_RULE_LIST = 'STRATE_RULE_LIST'
 export const STRATE_DATARULE_LIST = 'STRATE_DATARULE_LIST'
@@ -30,11 +30,11 @@ export const STRATE_DATA_UPLOAD_RAW = 'STRATE_DATA_UPLOAD_RAW'
 // 自定义事件
 export const EVENTS_LIST = 'EVENTS_LIST'
 
-// 威胁监测__实时监测
+// 仿真监测__实时监测
 export const REAL_MAIN_RENDER = 'REAL_MAIN_RENDER'
 export const REAL_SELECT_OPT = 'REAL_SELECT_OPT'
 
-// 威胁监测__攻击统计
+// 仿真监测__攻击统计
 export const CAL_MAIN_TYPE = 'CAL_MAIN_TYPE'
 export const CAL_TREND = 'CAL_TREND'
 

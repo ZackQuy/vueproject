@@ -90,7 +90,7 @@
             class="side_top_bar_title"
             v-bind:class="{active: !sidebar_dash_3}"
             @click="sidebar_dash_3 = false">
-            威胁态势地域分布
+            仿真态势地域分布
           </div>
           <!-- <div class='side_top_bar_trans'
             @click="sidebar_dash_3 = !sidebar_dash_3">

@@ -32,7 +32,7 @@ export default {
           // child: [
           //   {
           //     lnk: "/config/stratery",
-          //     text: "策略配置",
+          //     text: "玩偶配置",
           //   },{
           //     lnk: "/config/events",
           //     text: "自定义事件",

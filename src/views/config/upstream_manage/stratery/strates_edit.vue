@@ -2,9 +2,9 @@
   <div class="page_inner page_strates_new">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path: '/config/stratery' }">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/config/strates_chg' }">更改策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/config/strates_edit' }">编辑策略组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/stratery' }">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/strates_chg' }">更改玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/strates_edit' }">编辑玩偶组</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="page_body">
@@ -14,7 +14,7 @@
         >
           <el-col :span="8">
             <div class="col_1">
-              <el-input v-model="strates_edit_name_navtive" placeholder="请输入策略组名称"></el-input>
+              <el-input v-model="strates_edit_name_navtive" placeholder="请输入玩偶组名称"></el-input>
 
             </div>
           </el-col>
@@ -52,7 +52,7 @@
             prop="name"
             align="center"
             width="90"
-            label="策略名称">
+            label="玩偶名称">
           </el-table-column>
           <el-table-column
             label="启动探针"
@@ -327,7 +327,7 @@
         <el-row>
           <el-col>
             <div>
-              提示：策略依照列表排序顺序执行，如互斥只执行优先级高的
+              提示：玩偶依照列表排序顺序执行，如互斥只执行优先级高的
             </div>
           </el-col>
         </el-row>
@@ -365,7 +365,7 @@ export default {
     strates_save () {
       this.strates_info_ids = this.strates_pool_native.map(e => e.id)
       this.$valid([
-        {valid: this.strates_edit_name_navtive, msg: '请输入策略组名称'}
+        {valid: this.strates_edit_name_navtive, msg: '请输入玩偶组名称'}
       ])
         .then(() => {
           this.$store.dispatch('stratery/stratesEditSave', {

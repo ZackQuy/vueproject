@@ -2,9 +2,9 @@
   <div class="page_inner page_strates_new">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path: '/config/stratery' }">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/config/strates_chg' }">更改策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/config/strates_new' }">新建策略组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/stratery' }">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/strates_chg' }">更改玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/strates_new' }">新建玩偶组</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="page_body">
@@ -14,7 +14,7 @@
         >
           <el-col :span="8">
             <div class="col_1">
-              <el-input v-model="strates_info.name" placeholder="请输入策略组名称"></el-input>
+              <el-input v-model="strates_info.name" placeholder="请输入玩偶组名称"></el-input>
 
             </div>
           </el-col>
@@ -26,7 +26,7 @@
           </el-col>
           <el-col :span="7">
             <div class="col_3">
-              <el-button type="primary" @click="strate_new">新建策略</el-button>
+              <el-button type="primary" @click="strate_new">新建玩偶</el-button>
               <el-button type="success" @click="strates_save">保存</el-button>
             </div>
           </el-col>
@@ -62,7 +62,7 @@
             prop="name"
             align="center"
             width="90"
-            label="策略名称">
+            label="玩偶名称">
           </el-table-column>
           <el-table-column
             label="启动探针"
@@ -333,7 +333,7 @@
         <el-row>
           <el-col>
             <div>
-              提示：策略依照列表排序顺序执行，如互斥只执行优先级高的
+              提示：玩偶依照列表排序顺序执行，如互斥只执行优先级高的
             </div>
           </el-col>
         </el-row>
@@ -375,10 +375,10 @@ export default {
       //
 
       this.$valid([
-        {valid: this.strates_info.name.length > 3, msg: '请确认策略组名称长度不少于4位'},
-        {valid: this.strates_info.name.length < 17, msg: '请确认策略组名称长度不超过16位'},
-        {valid: this.$rules.name_rule(this.strates_info.name), msg: '请确认策略组名称不包含特殊字符'},
-        {valid: this.strates_info.ids.length, msg: '请至少选择一组策略'}
+        {valid: this.strates_info.name.length > 3, msg: '请确认玩偶组名称长度不少于4位'},
+        {valid: this.strates_info.name.length < 17, msg: '请确认玩偶组名称长度不超过16位'},
+        {valid: this.$rules.name_rule(this.strates_info.name), msg: '请确认玩偶组名称不包含特殊字符'},
+        {valid: this.strates_info.ids.length, msg: '请至少选择一组玩偶'}
       ])
         .then(() => {
           this.$store.dispatch('stratery/stratesCreate', this.strates_info)

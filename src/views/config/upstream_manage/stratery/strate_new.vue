@@ -2,10 +2,10 @@
   <div class="page_inner page_strate_new">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path:'/config/stratery'}">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_new'}">新建策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strate_new'}">新建策略</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/stratery'}">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_new'}">新建玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strate_new'}">新建玩偶</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="page_body">
@@ -17,7 +17,7 @@
         >
           <el-col :span="8">
             <div class="col_1">
-              <el-input v-model="strate_info.name" placeholder="请输入策略名称"></el-input>
+              <el-input v-model="strate_info.name" placeholder="请输入玩偶名称"></el-input>
 
             </div>
           </el-col>
@@ -40,7 +40,7 @@
 
           <el-col :span="7">
             <div class="col_3">
-              <el-button type="success" @click="strate_new">生成策略</el-button>
+              <el-button type="success" @click="strate_new">生成玩偶</el-button>
             </div>
           </el-col>
 
@@ -293,7 +293,7 @@
           <div class="title_button_layout">
             <el-row>
               <el-col :span="5">
-                <div class="strate_module_title">2.策略更新规则</div>
+                <div class="strate_module_title">2.玩偶更新规则</div>
               </el-col>
               <el-col :span="4" :offset="15">
                 <div class="t_a_r">
@@ -400,7 +400,7 @@
           <div class="title_button_layout">
             <el-row>
               <el-col :span="5">
-                <div class="strate_module_title">3.数据上传策略</div>
+                <div class="strate_module_title">3.数据上传玩偶</div>
               </el-col>
               <el-col :span="4" :offset="15">
                 <div class="t_a_r">
@@ -519,10 +519,10 @@ export default {
       this.strate_info.u_rule_ids = this.strate_datarule_list.filter(e => e.status === 1).map(e => e.id)
 
       this.$valid([
-        {valid: this.strate_info.name.length > 3, msg: '请确认策略名称长度不少于4位'},
-        {valid: this.strate_info.name.length < 17, msg: '请确认策略名称长度不超过16位'},
-        {valid: this.$rules.name_rule(this.strate_info.name), msg: '请确认策略名称不包含特殊字符'},
-        {valid: this.strate_info.u_rule_ids.length, msg: '请至少选择一组数据上传策略'}
+        {valid: this.strate_info.name.length > 3, msg: '请确认玩偶名称长度不少于4位'},
+        {valid: this.strate_info.name.length < 17, msg: '请确认玩偶名称长度不超过16位'},
+        {valid: this.$rules.name_rule(this.strate_info.name), msg: '请确认玩偶名称不包含特殊字符'},
+        {valid: this.strate_info.u_rule_ids.length, msg: '请至少选择一组数据上传玩偶'}
       ])
         .then(() => {
           this.$store.dispatch('stratery/strateCreate', this.strate_info)
@@ -560,7 +560,7 @@ export default {
     },
 
     strate_rule_del (id) {
-      this.$confirm('请确认是否删除该条策略更新规则?', '提示', {
+      this.$confirm('请确认是否删除该条玩偶更新规则?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
@@ -572,7 +572,7 @@ export default {
     },
 
     strate_data_del (id) {
-      this.$confirm('请确认是否删除该条数据上传策略?', '提示', {
+      this.$confirm('请确认是否删除该条数据上传玩偶?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'

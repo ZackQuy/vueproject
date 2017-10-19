@@ -2,9 +2,9 @@
   <div class="page_inner page_strates_details">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path:'/config/stratery'}">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_details'}">策略组详情</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/stratery'}">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_details'}">玩偶组详情</el-breadcrumb-item>
       </el-breadcrumb>
 
     </div>
@@ -37,7 +37,7 @@
           prop="name"
           width="140"
           align="center"
-          label="策略名称">
+          label="玩偶名称">
         </el-table-column>
         <el-table-column
           label="启动探针"

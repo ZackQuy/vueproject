@@ -36,10 +36,10 @@ const Login = resolve => require(['views/login'], resolve)
 // 首页
 const Home = resolve => require(['views/home/index'], resolve)
 
-// 威胁感知
+// 仿真感知
 // const Everisk = resolve => require(['views/Everisk/index'], resolve)
 
-// 威胁分析
+// 仿真市场
 const Calculate = resolve => require(['views/analyrisk/calculate'], resolve)
 const Realtime = resolve => require(['views/analyrisk/realtime'], resolve)
 
@@ -76,7 +76,7 @@ const routers = [
       {
         path: 'dashboard',
         component: Home,
-        name: '威胁概况'
+        name: '仿真概况'
 
       }
     ]
@@ -112,32 +112,32 @@ const routers = [
       {
         path: 'stratery',
         components: { dashboard: Stratery, sidebar: Config_side },
-        name: '当前运行策略组'
+        name: '当前运行玩偶组'
       },
       {
         path: 'strates_chg',
         components: { dashboard: Strates_chg, sidebar: Config_side },
-        name: '更改策略组'
+        name: '更改玩偶组'
       },
       {
         path: 'strates_new',
         components: { dashboard: Strates_new, sidebar: Config_side },
-        name: '新建策略组'
+        name: '新建玩偶组'
       },
       {
         path: 'strates_details',
         components: { dashboard: Strates_details, sidebar: Config_side },
-        name: '策略组详情'
+        name: '玩偶组详情'
       },
       {
         path: 'strates_edit',
         components: { dashboard: Strates_edit, sidebar: Config_side },
-        name: '策略组编辑'
+        name: '玩偶组编辑'
       },
       {
         path: 'strate_new',
         components: { dashboard: Strate_new, sidebar: Config_side },
-        name: '新建策略'
+        name: '新建玩偶'
       },
       {
         path: 'strate_device',
@@ -147,12 +147,12 @@ const routers = [
       {
         path: 'strate_rule',
         components: { dashboard: Strate_rule, sidebar: Config_side },
-        name: '新建策略更新规则'
+        name: '新建玩偶更新规则'
       },
       {
         path: 'strate_data',
         components: { dashboard: Strate_data, sidebar: Config_side },
-        name: '新建数据上传策略'
+        name: '新建数据上传玩偶'
       },
       {
         path: 'strate_datarule_new',

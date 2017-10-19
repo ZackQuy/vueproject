@@ -4,7 +4,7 @@ import { axios, fetch } from 'api/config'
 import { note, valid } from 'assets/js/tool'
 
 const state = {
-  // 策略组列表
+  // 玩偶组列表
   results_groups: [],
   active_group: 0,
   info_groups: {
@@ -15,7 +15,7 @@ const state = {
     data_perpage: 0
   },
 
-  // 当前策略组信息
+  // 当前玩偶组信息
   cur_strateInfo: {
     name: '',
     start_time: ''
@@ -41,7 +41,7 @@ const state = {
     data_perpage: 0
   },
 
-  // 新建策略部分
+  // 新建玩偶部分
   strate_device_list: [],
   strate_rule_list: [],
   strate_datarule_list: [],
@@ -54,14 +54,14 @@ const state = {
     manufacturer: []
   },
 
-  // 新建数据上传 策略
+  // 新建数据上传 玩偶
   strate_data_upload_raw: {
     eventlist: [],
     rulelist: [],
     event_id: null
   },
 
-  // 策略组详情
+  // 玩偶组详情
   strates_details: {
     strate_list: [],
     strate_info: {
@@ -91,7 +91,7 @@ const actions = {
   //     })
   // },
 
-  // 获取当前运行策略组列表
+  // 获取当前运行玩偶组列表
   stratesCur ({dispatch, commit}) {
     fetch('/ccb/tactics_group/current')
       .then(res => {
@@ -102,7 +102,7 @@ const actions = {
       })
   },
 
-  // 获取策略组列表
+  // 获取玩偶组列表
   stratesList ({dispatch, commit}) {
     fetch('/ccb/tactics_group')
       .then(res => {
@@ -111,7 +111,7 @@ const actions = {
       })
   },
 
-  // 获取策略池列表
+  // 获取玩偶池列表
   stratesPool ({dispatch, commit}, params) {
     fetch('/ccb/tactics/list')
       .then(res => {
@@ -121,14 +121,14 @@ const actions = {
         console.log(err)
       })
   },
-  // 新建策略组
+  // 新建玩偶组
   stratesCreate ({dispatch, commit}, params) {
 
     fetch('/ccb/tactics_group/create', params)
       .then(res => {
-        // 新建成功之后弹窗提示并且跳转到策略组列表
+        // 新建成功之后弹窗提示并且跳转到玩偶组列表
         note({
-          message: '新建策略组成功',
+          message: '新建玩偶组成功',
           type: 'success'
         })
         router.push({
@@ -141,23 +141,23 @@ const actions = {
       })
   },
 
-  // 启动策略组
+  // 启动玩偶组
   stratesStart ({dispatch, commit}, params) {
     if (state.results_groups.length === 0) {
       note({
-        message: '暂无可用的策略组',
+        message: '暂无可用的玩偶组',
         type: 'info'
       })
     } else if (params.id === state.results_groups[0].id) {
       note({
-        message: '当前策略组正在启用中',
+        message: '当前玩偶组正在启用中',
         type: 'info'
       })
     } else {
       fetch('/ccb/tactics_group/start', params)
         .then(res => {
           note({
-            message: '启用策略组成功',
+            message: '启用玩偶组成功',
             type: 'success'
           })
           dispatch('stratesList')
@@ -167,7 +167,7 @@ const actions = {
         })
     }
   },
-  // 策略组详情
+  // 玩偶组详情
   stratesDetail ({dispatch, commit}, params) {
     fetch('/ccb/tactics_group/detail', params)
       .then(res => {
@@ -179,7 +179,7 @@ const actions = {
       })
   },
 
-  // 策略组编辑__获得策略列表
+  // 玩偶组编辑__获得玩偶列表
   stratesEdit ({dispatch, commit}, params) {
     fetch('/ccb/tactics_group/detail', params)
       .then(res => {
@@ -191,14 +191,14 @@ const actions = {
       })
   },
 
-  // 策略组编辑__策略列表保存
+  // 玩偶组编辑__玩偶列表保存
 
   stratesEditSave ({dispatch, commit}, params) {
     fetch('/ccb/tactics_group/edit', params)
       .then(res => {
         // 赋值
         note({
-          message: '编辑策略组成功',
+          message: '编辑玩偶组成功',
           type: 'success'
         })
         router.push({
@@ -210,12 +210,12 @@ const actions = {
       })
   },
 
-  // 删除策略组
+  // 删除玩偶组
   stratesDelete ({dispatch, commit}, params) {
     fetch('/ccb/tactics_group/del', params)
       .then(res => {
         note({
-          message: '删除策略组成功',
+          message: '删除玩偶组成功',
           type: 'success'
         })
         dispatch('stratesList')
@@ -225,7 +225,7 @@ const actions = {
       })
   },
 
-  // 新建策略_划定设备列表
+  // 新建玩偶_划定设备列表
   strateDeviceList ({dispatch, commit}, params) {
     fetch('/ccb/tactics/manufacturer_rule/list')
       .then(res => {
@@ -236,7 +236,7 @@ const actions = {
       })
   },
 
-  // 新建策略_策略更新规则
+  // 新建玩偶_玩偶更新规则
   strateRuleList ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_update_rule/list')
       .then(res => {
@@ -247,7 +247,7 @@ const actions = {
       })
   },
 
-  // 新建策略_数据上传策略
+  // 新建玩偶_数据上传玩偶
   strateDataruleList ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_upload_data_rule/list')
       .then(res => {
@@ -258,13 +258,13 @@ const actions = {
       })
   },
 
-  // 新建策略_策略生成接口
+  // 新建玩偶_玩偶生成接口
   strateCreate ({dispatch, commit}, params) {
     fetch('/ccb/tactics/create', params)
       .then(res => {
-        // 新建成功之后弹窗提示并且跳转到策略组列表
+        // 新建成功之后弹窗提示并且跳转到玩偶组列表
         note({
-          message: '新建策略成功',
+          message: '新建玩偶成功',
           type: 'success'
         })
         router.push({
@@ -285,10 +285,10 @@ const actions = {
   // }
 
   strateDeviceRender ({dispatch, commit}, params) {
-    // 新建策略_划定设备列表_地域列表
-    // 新建策略_划定设备列表_品牌列表
-    // 新建策略_划定设备列表_系统列表
-    // 新建策略_划定设备列表_版本列表
+    // 新建玩偶_划定设备列表_地域列表
+    // 新建玩偶_划定设备列表_品牌列表
+    // 新建玩偶_划定设备列表_系统列表
+    // 新建玩偶_划定设备列表_版本列表
     axios.all([
       fetch('/ccb/tactics/manufacturer/list'),
       fetch('/ccb/tactics/os_version/list'),
@@ -308,7 +308,7 @@ const actions = {
       })
   },
 
-  // 新建策略_划定设备列表_创建
+  // 新建玩偶_划定设备列表_创建
   strateDeviceCreate ({dispatch, commit}, params) {
     fetch('/ccb/tactics/manufacturer_rule/create', params)
       .then(res => {
@@ -325,7 +325,7 @@ const actions = {
       })
   },
 
-  // 新建策略_划定设备列表_删除
+  // 新建玩偶_划定设备列表_删除
   strateDeviceDelele ({dispatch, commit}, params) {
     fetch('/ccb/tactics/manufacturer_rule/delete', params)
       .then(res => {
@@ -340,12 +340,12 @@ const actions = {
       })
   },
 
-  // 新建策略_新建策略更新规则
+  // 新建玩偶_新建玩偶更新规则
   strateUpdateCreate ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_update_rule/create', params)
       .then(res => {
         note({
-          message: '新建策略更新规则成功',
+          message: '新建玩偶更新规则成功',
           type: 'success'
         })
         router.push({
@@ -354,12 +354,12 @@ const actions = {
       })
   },
 
-  // 新建策略_策略更新规则_删除
+  // 新建玩偶_玩偶更新规则_删除
   strateUpdateDelele ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_update_rule/delete', params)
       .then(res => {
         note({
-          message: '删除策略更新规则成功',
+          message: '删除玩偶更新规则成功',
           type: 'success'
         })
         dispatch('strateRuleList')
@@ -370,8 +370,8 @@ const actions = {
   },
 
   strateDataRender ({dispatch, commit}, params) {
-    // 新建策略_数据上传策略_事件类型列表
-    // 新建策略_数据上传策略_数据上传规则列表
+    // 新建玩偶_数据上传玩偶_事件类型列表
+    // 新建玩偶_数据上传玩偶_数据上传规则列表
 
     axios.all([
       fetch('/ccb/tactics/tactics_upload_data/risk_types/list'),
@@ -389,12 +389,12 @@ const actions = {
       })
   },
 
-  // 新建策略_新建数据上传策略的保存
+  // 新建玩偶_新建数据上传玩偶的保存
   strateDataCreate ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_upload_data_rule/create', params)
       .then(res => {
         note({
-          message: '新建数据上传策略成功',
+          message: '新建数据上传玩偶成功',
           type: 'success'
         })
         router.push({
@@ -406,12 +406,12 @@ const actions = {
       })
   },
 
-  // 新建策略_数据上传策略_删除
+  // 新建玩偶_数据上传玩偶_删除
   strateDataDelele ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_upload_data_rule/delete', params)
       .then(res => {
         note({
-          message: '删除数据上传策略成功',
+          message: '删除数据上传玩偶成功',
           type: 'success'
         })
         dispatch('strateDataruleList')
@@ -421,7 +421,7 @@ const actions = {
       })
   },
 
-  // 新建策略_新建数据上传策略_策略下数据上传规则创建
+  // 新建玩偶_新建数据上传玩偶_玩偶下数据上传规则创建
   strateDataUploadRule ({dispatch, commit}, params) {
     fetch('/ccb/tactics/tactics_upload_data/create', params)
       .then(res => {

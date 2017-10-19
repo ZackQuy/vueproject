@@ -26,7 +26,7 @@ const scatter = (map_data) => {
   return {
     title: {
       show: false,
-      text: '梆梆安全移动威胁感知',
+      text: '梆梆安全移动仿真感知',
       left: 'center'
     },
     tooltip: {

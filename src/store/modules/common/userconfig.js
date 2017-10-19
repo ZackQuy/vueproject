@@ -64,7 +64,7 @@ const state = {
     },
     {
       value: 'e_attframe',
-      label: '攻击框架分析'
+      label: '攻击框架市场'
     },
     {
       value: 'e_chook',
@@ -76,7 +76,7 @@ const state = {
     },
     {
       value: 'e_scandex',
-      label: '位置欺诈分析'
+      label: '位置欺诈市场'
     },
     {
       value: 'e_root',
@@ -84,7 +84,7 @@ const state = {
     },
     {
       value: 'e_cheatdns',
-      label: '域名欺诈分析'
+      label: '域名欺诈市场'
     }
   ],
   global_root: ['是', '否']

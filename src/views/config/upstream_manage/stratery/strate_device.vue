@@ -2,10 +2,10 @@
   <div class="page_inner page_strate_device">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path:'/config/stratery'}">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strates_new'}">新建策略组</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path:'/config/strate_new'}">新建策略</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/stratery'}">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">更改玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strates_new'}">新建玩偶组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path:'/config/strate_new'}">新建玩偶</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strate_device'}">新建划定设备</el-breadcrumb-item>
       </el-breadcrumb>
     </div>

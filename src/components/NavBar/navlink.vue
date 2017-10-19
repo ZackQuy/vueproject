@@ -10,7 +10,7 @@
         <router-link to="/home" tag="div" class="nav_item">首页</router-link>
       </el-col>
       <el-col :span="4">
-        <router-link to="/analy" tag="div" class="nav_item">威胁分析</router-link>
+        <router-link to="/analy" tag="div" class="nav_item">仿真市场</router-link>
       </el-col>
       <el-col :span="4">
         <router-link to="/config" tag="div" class="nav_item">系统配置</router-link>

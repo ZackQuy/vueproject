@@ -4,7 +4,7 @@ import { axios, fetch } from 'api/config'
 import { note, valid } from 'assets/js/tool'
 const state = {
 
-  // 风险类型的中文映射关系
+  // 卡通类型的中文映射关系
   event_reflect: {
     'emulator': '模拟器',
     'modify': '内存空间保护',
@@ -12,12 +12,12 @@ const state = {
     'soana': 'SO安全检测',
     'mockdev': '设备复用(篡改设备标识)',
 
-    'attframe': '攻击框架分析',
+    'attframe': '攻击框架市场',
     'chook': '系统函数Hook',
     'inject': '程序注入',
-    'scandex': '位置欺诈分析',
+    'scandex': '位置欺诈市场',
     'root': '系统Root检测',
-    'cheatdns': '域名欺诈分析'
+    'cheatdns': '域名欺诈市场'
   },
   // 自定义事件列表
   events_list: []

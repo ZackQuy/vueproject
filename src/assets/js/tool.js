@@ -11,8 +11,8 @@ const note = (prop) => {
 
 // 数据的校验规则 传入数据
 // this.$valid([
-//   {valid: this.strates_info.name, msg: '请输入策略组名称'},
-//   {valid: this.strates_info.ids.length, msg: '请至少选择一组策略'}
+//   {valid: this.strates_info.name, msg: '请输入玩偶组名称'},
+//   {valid: this.strates_info.ids.length, msg: '请至少选择一组玩偶'}
 // ])
 const valid = (props) => {
   return new Promise((resolve, reject) => {

@@ -2,8 +2,8 @@
   <div class="page_inner page_stratery">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path: '/config/stratery' }">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/config/stratery' }">当前运行策略组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/stratery' }">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/stratery' }">当前运行玩偶组</el-breadcrumb-item>
       </el-breadcrumb>
 
     </div>
@@ -14,7 +14,7 @@
           align="bottom"
         >
           <el-col :span="6">
-            <div class="col_1">当前运行策略组</div>
+            <div class="col_1">当前运行玩偶组</div>
           </el-col>
           <el-col :span="12">
             <div class="col_2">
@@ -29,7 +29,7 @@
           </el-col>
           <el-col :span="6">
             <div class="col_3">
-              <el-button type="primary" @click="edit_strates">更改策略组</el-button>
+              <el-button type="primary" @click="edit_strates">更改玩偶组</el-button>
             </div>
           </el-col>
 
@@ -52,7 +52,7 @@
           prop="name"
           width="140"
           align="center"
-          label="策略名称">
+          label="玩偶名称">
         </el-table-column>
         <el-table-column
           label="启动探针"

@@ -32,7 +32,7 @@ export default {
           child: [
             {
               lnk: '/config/stratery',
-              text: '策略组列表'
+              text: '玩偶组列表'
             }, {
               lnk: '/config/events',
               text: '自定义事件'

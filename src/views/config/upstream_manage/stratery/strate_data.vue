@@ -3,19 +3,19 @@
     <div class="page_head">
       <el-breadcrumb separator=">">
         <el-breadcrumb-item :to="{ path:'/config/stratery'}">
-          策略组列表
+          玩偶组列表
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">
-          更改策略组
+          更改玩偶组
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strates_new'}">
-          新建策略组
+          新建玩偶组
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strate_new'}">
-          新建策略
+          新建玩偶
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strate_data'}">
-          新建数据上传策略
+          新建数据上传玩偶
         </el-breadcrumb-item>
       </el-breadcrumb>
     </div>
@@ -28,7 +28,7 @@
         >
           <el-col :span="8">
             <div class="col_1">
-              <el-input v-model="strate_data_info.name" placeholder="请输入数据上传策略名称"></el-input>
+              <el-input v-model="strate_data_info.name" placeholder="请输入数据上传玩偶名称"></el-input>
             </div>
           </el-col>
           <el-col :span="7" :offset="9">
@@ -226,9 +226,9 @@ export default {
         u_id: this.strate_data_info.upload_rule_id
       }
       this.$valid([
-        {valid: this.strate_data_info.name.length > 3, msg: '请确认数据上传策略名称长度不少于4位'},
-        {valid: this.strate_data_info.name.length < 17, msg: '请确认数据上传策略名称长度不超过16位'},
-        {valid: this.$rules.name_rule(this.strate_data_info.name), msg: '请确认数据上传策略名称不包含特殊字符'},
+        {valid: this.strate_data_info.name.length > 3, msg: '请确认数据上传玩偶名称长度不少于4位'},
+        {valid: this.strate_data_info.name.length < 17, msg: '请确认数据上传玩偶名称长度不超过16位'},
+        {valid: this.$rules.name_rule(this.strate_data_info.name), msg: '请确认数据上传玩偶名称不包含特殊字符'},
         {valid: this.strate_data_info.event_checked.length, msg: '请选择至少一种事件类型'},
         {valid: this.strate_data_info.upload_rule_id, msg: '请选择数据上传规则'}
       ])

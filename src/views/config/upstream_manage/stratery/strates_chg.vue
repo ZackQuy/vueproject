@@ -2,8 +2,8 @@
   <div class="page_inner page_strates_chg">
     <div class="page_head">
       <el-breadcrumb separator=">">
-        <el-breadcrumb-item :to="{ path: '/config/stratery'}">策略组列表</el-breadcrumb-item>
-        <el-breadcrumb-item :to="{ path: '/config/strates_chg'}">更改策略组</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/stratery'}">玩偶组列表</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/config/strates_chg'}">更改玩偶组</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="page_body">
@@ -26,14 +26,14 @@
                   <i class="iconfont icon-dengpao"></i>
                   <span class="">备注:</span>
                 </span>
-                <span class="note_info_right">仅未启用过的策略组和策略及细项才可以编辑和修改</span>
+                <span class="note_info_right">仅未启用过的玩偶组和玩偶及细项才可以编辑和修改</span>
               </div>
             </div>
           </el-col>
           <el-col :span="7">
             <div class="col_3">
-              <el-button type="primary" @click="strate_new">新建策略组</el-button>
-              <el-button type="success" @click="strate_start">启动策略组</el-button>
+              <el-button type="primary" @click="strate_new">新建玩偶组</el-button>
+              <el-button type="success" @click="strate_start">启动玩偶组</el-button>
             </div>
           </el-col>
 
@@ -151,12 +151,12 @@ export default {
   },
   methods: {
 
-    // 新建策略组
+    // 新建玩偶组
     strate_new (props) {
       this.$router.push('/config/strates_new')
     },
 
-    // 启动策略组
+    // 启动玩偶组
     strate_start (props) {
       // 参数在页面中进行管理
       this.$store.dispatch('stratery/stratesStart', {
@@ -164,7 +164,7 @@ export default {
       })
     },
 
-    // 编辑策略组
+    // 编辑玩偶组
     strate_edit (props) {
       this.$router.push({
         path: 'strates_edit',
@@ -174,7 +174,7 @@ export default {
       })
     },
 
-    // 策略组详情
+    // 玩偶组详情
     strate_detail (props) {
       this.$router.push({
         path: 'strates_details',
@@ -184,9 +184,9 @@ export default {
       })
     },
 
-    // 策略组删除
+    // 玩偶组删除
     strate_delete (props) {
-      this.$confirm('策略组被删除后无法恢复, 是否继续?', '提示', {
+      this.$confirm('玩偶组被删除后无法恢复, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
@@ -207,7 +207,7 @@ export default {
         type: 'info'
       })
     },
-    // 导出策略组
+    // 导出玩偶组
     strate_export (props) {
       window.open('/everisk/api/v3/ccb/tactics_group/export')
     }

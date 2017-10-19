@@ -3,19 +3,19 @@
     <div class="page_head">
       <el-breadcrumb separator=">">
         <el-breadcrumb-item :to="{ path:'/config/stratery'}">
-          策略组列表
+          玩偶组列表
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strates_chg'}">
-          更改策略组
+          更改玩偶组
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strates_new'}">
-          新建策略组
+          新建玩偶组
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strate_new'}">
-          新建策略
+          新建玩偶
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strate_data'}">
-          新建数据上传策略
+          新建数据上传玩偶
         </el-breadcrumb-item>
         <el-breadcrumb-item :to="{ path:'/config/strate_data_rule'}">
           新建数据上传规则
